@@ -1,6 +1,23 @@
 <?php
 
 return array(
+    'carajo',
+    'maricón',
+    'pendejo',
+    'coño',
+    'mierda',
+    'puta',
+    'putas',
+    'jodes',
+    'jodo',
+    'joda',
+    'jodió',
+    'joder',
+    'cabrón',
+    'jódete',
+    'chocha',
+    'mamao',
+    //english
     'abbo',
     'abortionist',
     'abuser',
