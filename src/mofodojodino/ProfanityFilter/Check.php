@@ -87,18 +87,16 @@ class Check
             $badwords[ $i ] = '/' . preg_replace(
                     array_keys($this->replacements),
                     array_values($this->replacements),
-                    $this->badwords[ $i ]
+                    $this->badwords[ $i ]                //a single word in the bad word list
                 ) . '/i';
             $badwords[ $i ] = str_replace('{$}', self::IN_BETWEEN_REGEX, $badwords[ $i ]);
         }
 
         foreach ($badwords as $profanity) {
-            if ($this->stringHasProfanity($string, $profanity)) {
-                return true;
-            }
+                stringHasProfanity($string, $profanity);
         }
 
-        return false;
+        return $string_explode;
     }
 
     /**
@@ -111,7 +109,7 @@ class Check
      */
     private function stringHasProfanity($string, $profanity)
     {
-        return preg_match($profanity, $string) === 1;
+       preg_replace($profanity, "*****", $string);
     }
 
     /**
